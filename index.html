@@ -3,43 +3,57 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
+    <title>ContenutiPro - Contenuti Digitali per la tua Attività</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ContenutiPro</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; }
-        header { background-color: #4a90e2; color: white; padding: 1rem 2rem; text-align: center; }
-        main { padding: 2rem; max-width: 800px; margin: auto; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1, h2 { color: #333; }
-        form { margin-top: 2rem; }
-        input, textarea { width: 100%; padding: 0.75rem; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 5px; }
-        button { background-color: #4a90e2; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 5px; cursor: pointer; }
-        button:hover { background-color: #357ab7; }
-        footer { text-align: center; padding: 1rem; font-size: 0.9rem; color: #777; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fdfdfd; color: #333; }
+        header { background: #5e17eb; color: white; padding: 2em; text-align: center; }
+        section { padding: 2em; max-width: 800px; margin: auto; }
+        .cta { background: #f0f0f0; padding: 2em; border-radius: 10px; }
+        form { display: flex; flex-direction: column; gap: 1em; }
+        input, textarea { padding: 0.8em; border: 1px solid #ccc; border-radius: 5px; }
+        button { background: #5e17eb; color: white; border: none; padding: 1em; border-radius: 5px; cursor: pointer; }
+        footer { text-align: center; font-size: 0.9em; color: #777; padding: 2em 1em; background: #fafafa; }
+        .telegram-promo { margin-top: 2em; font-size: 0.9em; }
     </style>
 </head>
 <body>
     <header>
         <h1>ContenutiPro</h1>
-        <p>Contenuti digitali professionali su richiesta</p>
+        <p>Contenuti digitali professionali per far crescere la tua attività</p>
     </header>
-    <main>
+
+    <section>
+        <h2>Chi siamo</h2>
+        <p>Colleghiamo aziende e liberi professionisti con i migliori freelancer specializzati in contenuti digitali.</p>
+
+        <h2>Cosa offriamo</h2>
+        <ul>
+            <li>Testi per siti web</li>
+            <li>Post per social media</li>
+            <li>Email marketing</li>
+            <li>Contenuti per wedding planner e altro</li>
+        </ul>
+
+        <div class="telegram-promo">
+            🔔 Scopri anche il nostro canale con offerte tech giornaliere: <a href="https://t.me/offertetechdaily0" target="_blank">t.me/offertetechdaily0</a>
+        </div>
+    </section>
+
+    <section class="cta">
         <h2>Richiedi un contenuto</h2>
-        <p>Compila il modulo qui sotto per ricevere un contenuto personalizzato. Il nostro team ti risponderà al più presto.</p>
+        <p>Compila il modulo qui sotto per ricevere un contenuto personalizzato o una consulenza gratuita.</p>
         <form action="https://formspree.io/f/xgvkgwea" method="POST">
-            <label for="name">Nome:</label>
-            <input type="text" name="name" id="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" required>
-
-            <label for="message">Descrizione del contenuto richiesto:</label>
-            <textarea name="message" id="message" rows="6" required></textarea>
-
+            <input type="text" name="name" placeholder="Il tuo nome" required>
+            <input type="email" name="_replyto" placeholder="La tua email" required>
+            <textarea name="message" rows="5" placeholder="Descrivici di cosa hai bisogno..." required></textarea>
             <button type="submit">Invia richiesta</button>
         </form>
-    </main>
+    </section>
+
     <footer>
-        <p>&copy; 2025 ContenutiPro - Tutti i diritti riservati</p>
+        &copy; 2025 ContenutiPro – Tutti i diritti riservati<br>
+        Email: infocontenutipro@gmail.com
     </footer>
 </body>
 </html>
