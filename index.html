@@ -4,271 +4,215 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ContenutiPro - Servizi digitali professionali</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <style>
-    /* Reset e base */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif, Arial, sans-serif;
-      background: linear-gradient(135deg, #0d1b2a, #1b263b);
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #292b3e);
       color: #e0e0e0;
+      line-height: 1.6;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 20px;
-    }
-    a {
-      color: #ffca28;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+      justify-content: space-between;
     }
 
     header {
-      background: rgba(255 255 255 / 0.1);
-      padding: 25px 30px;
+      background: #202040;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .header-container {
+      max-width: 960px;
+      margin: 0 auto;
       display: flex;
-      align-items: center;   /* vertical center */
-      justify-content: center; /* horizontal center */
-      gap: 20px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgb(0 0 0 / 0.25);
-      animation: slideDown 1s ease forwards;
-      text-align: center;
-      width: 100%;
-      max-width: 900px;
-      margin-bottom: 30px;
-      user-select: none;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
     }
+
     .logo {
-      font-weight: 700;
-      font-size: 36px;
-      color: #ffca28;
-      letter-spacing: 2px;
-      line-height: 1;
-      animation: pulse 3s infinite alternate ease-in-out;
+      flex-shrink: 0;
     }
+
     header h1 {
-      font-size: 26px;
-      font-weight: 600;
       margin: 0;
-      color: #fff;
-      text-shadow: 0 2px 6px rgb(0 0 0 / 0.4);
-      line-height: 1.2;
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-align: center;
+      color: #ffca28;
+      user-select: none;
     }
 
     main {
-      background: rgba(255 255 255 / 0.05);
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgb(0 0 0 / 0.25);
-      padding: 25px 40px;
-      width: 100%;
-      max-width: 900px;
-      margin-bottom: 50px;
-    }
-    section {
-      margin-bottom: 40px;
-    }
-    section h2 {
-      font-size: 28px;
-      color: #ffca28;
-      margin-bottom: 15px;
-      border-bottom: 2px solid #ffca28;
-      padding-bottom: 6px;
-    }
-    p, ul {
-      font-size: 17px;
-      line-height: 1.5;
-      color: #ddd;
-    }
-    ul.services-list {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    ul.services-list li {
-      padding: 8px 0;
-      border-bottom: 1px solid #444;
-    }
-    ul.services-list li strong {
-      color: #ffca28;
+      flex-grow: 1;
+      max-width: 960px;
+      margin: 30px auto;
+      padding: 0 20px;
     }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    label {
-      font-weight: 600;
-      font-size: 16px;
-      color: #ffca28;
-    }
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      padding: 12px 15px;
-      border-radius: 8px;
-      border: none;
-      font-size: 16px;
-      font-family: inherit;
-      resize: vertical;
-      background: rgba(255 255 255 / 0.1);
-      color: #fff;
-      box-shadow: inset 0 0 8px rgb(0 0 0 / 0.3);
-      transition: background-color 0.3s ease;
-    }
-    input[type="text"]:focus,
-    input[type="email"]:focus,
-    textarea:focus {
-      background: rgba(255 255 255 / 0.25);
-      outline: none;
-      box-shadow: 0 0 10px #ffca28;
-    }
-    button[type="submit"] {
-      background: #ffca28;
-      border: none;
-      padding: 14px;
-      font-size: 18px;
-      font-weight: 700;
+    section {
+      background: #2a2a44;
+      padding: 25px 30px;
       border-radius: 12px;
-      cursor: pointer;
-      color: #111;
-      box-shadow: 0 0 15px #ffca28;
-      transition: background-color 0.3s ease;
+      margin-bottom: 30px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
     }
-    button[type="submit"]:hover {
-      background: #e6b623;
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(255, 202, 40, 0.6);
+    }
+
+    h2 {
+      color: #ffca28;
+      margin-top: 0;
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    /* Form */
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #ffd54f;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 16px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+      background-color: #1e1e30;
+      color: #f0f0f0;
+      resize: vertical;
+    }
+
+    form input::placeholder, form textarea::placeholder {
+      color: #b0b0b0;
+    }
+
+    form button {
+      background: #ffca28;
+      color: #202020;
+      border: none;
+      padding: 12px 25px;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    form button:hover {
+      background: #e6b422;
     }
 
     footer {
-      background: #1b263b;
-      color: #ffca28;
-      font-weight: 600;
-      font-size: 20px;
-      padding: 25px 30px;
-      border-radius: 12px;
-      width: 100%;
-      max-width: 900px;
-      box-shadow: 0 8px 20px rgb(0 0 0 / 0.25);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 12px;
-      user-select: none;
-    }
-    footer a {
+      background: #ffca28;
+      color: #202020;
+      padding: 20px;
+      text-align: center;
       font-weight: 700;
-      font-size: 22px;
-      color: #ffca28;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .telegram-icon {
-      width: 24px;
-      height: 24px;
-      fill: #ffca28;
-      transition: fill 0.3s ease;
-    }
-    footer a:hover .telegram-icon {
-      fill: #ffe066;
+      font-size: 1.1rem;
+      user-select: none;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
     }
 
-    /* Animazioni */
-    @keyframes slideDown {
-      0% {
-        opacity: 0;
-        transform: translateY(-15px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    @keyframes pulse {
-      0% {
-        text-shadow: 0 0 12px #ffca28;
-      }
-      100% {
-        text-shadow: 0 0 25px #ffe066;
-      }
+    footer a {
+      color: #202020;
+      font-weight: 900;
+      text-decoration: none;
+      margin-left: 6px;
     }
 
-    /* Fade in sezioni al scroll */
-    .fade-section {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+    footer a:hover {
+      text-decoration: underline;
     }
-    .fade-section.visible {
-      opacity: 1;
-      transform: translateY(0);
+
+    footer .telegram-icon {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-left: 6px;
+      fill: #202020;
     }
 
     /* Responsive */
     @media (max-width: 600px) {
-      main {
-        padding: 25px 15px;
-        margin-bottom: 40px;
-      }
-      header {
+      .header-container {
         flex-direction: column;
-        gap: 15px;
-        padding: 20px 15px;
+        gap: 10px;
       }
       header h1 {
-        font-size: 22px;
-      }
-      .logo {
-        font-size: 30px;
-      }
-      section h2 {
-        font-size: 22px;
-      }
-      footer {
-        font-size: 18px;
-        flex-wrap: wrap;
-        gap: 6px;
-        padding: 18px 15px;
-      }
-      footer a {
-        font-size: 20px;
+        font-size: 1.4rem;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo" aria-label="Logo ContenutiPro">CP</div>
-    <h1>ContenutiPro - Servizi digitali professionali</h1>
+    <div class="header-container">
+      <div class="logo" aria-label="Logo ContenutiPro" role="img">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" fill="transparent"/>
+          <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+            font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="36" fill="#ffca28">
+            CP
+          </text>
+        </svg>
+      </div>
+      <h1>ContenutiPro - Servizi digitali professionali</h1>
+    </div>
   </header>
 
   <main>
-    <section id="chi-siamo" class="fade-section">
+    <section id="chi-siamo">
       <h2>Chi siamo</h2>
-      <p>
-        ContenutiPro è una piattaforma dedicata a fornire contenuti digitali professionali e personalizzati per il tuo business. Siamo un team di esperti e freelancer selezionati, pronti a trasformare le tue idee in realtà digitali.
-      </p>
+      <p>ContenutiPro è il tuo partner digitale per la creazione di contenuti professionali e personalizzati, pensati per far crescere la tua attività online.</p>
+      <p>La nostra missione è semplificare il processo di acquisizione contenuti, mettendo in contatto aziende e freelancer esperti, per un risultato impeccabile e senza stress.</p>
     </section>
 
-    <section id="cosa-offriamo" class="fade-section">
+    <section id="cosa-offriamo">
       <h2>Cosa offriamo</h2>
-      <ul class="services-list">
-        <li><strong>Creazione testi:</strong> articoli, blog post, descrizioni prodotto, email marketing</li>
-        <li><strong>Design grafico:</strong> loghi, banner, post social, brochure</li>
-        <li><strong>Video editing:</strong> montaggi, animazioni, reel per Instagram e TikTok</li>
-        <li><strong>Social media management:</strong> gestione account, strategia, contenuti calendarizzati</li>
-        <li><strong>Servizi personalizzati:</strong> su richiesta, con analisi dedicata e preventivo</li>
-        <li><strong>Contenuti per wedding planner:</strong> inviti digitali, coordinati grafici, storytelling nozze</li>
+      <ul>
+        <li>Contenuti per social media (post, grafiche, video brevi)</li>
+        <li>Copywriting e articoli SEO</li>
+        <li>Design grafico e branding</li>
+        <li>Contenuti dedicati a wedding planner (es. inviti digitali, presentazioni, promozioni)</li>
+        <li>Servizi personalizzati in base alle esigenze (es. email marketing, brochure digitali, landing page)</li>
       </ul>
+      <p>Tutti i contenuti sono prodotti da freelancer selezionati, professionisti del settore, e consegnati tramite email o Google Drive, a scelta del cliente.</p>
     </section>
 
-    <section id="contatti" class="fade-section">
-      <h2>Modulo contatti</h2>
-      <form action="https://formspree.io/f/xgvkgwea" method="POST" novalidate>
+    <section id="contatti">
+      <h2>Contattaci</h2>
+      <form action="https://formspree.io/f/xgvkgwea" method="POST">
         <label for="nome">Nome completo</label>
         <input type="text" id="nome" name="nome" required placeholder="Il tuo nome completo" />
         
@@ -294,7 +238,7 @@
   <script>
     // Fade in sezioni al scroll
     document.addEventListener('DOMContentLoaded', () => {
-      const sections = document.querySelectorAll('.fade-section');
+      const sections = document.querySelectorAll('section');
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if(entry.isIntersecting) {
