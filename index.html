@@ -1,91 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ContenutiPro - Servizi digitali per aziende</title>
-<style>
-  body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; color: #333; }
-  header, footer { background: #003366; color: white; padding: 15px; text-align: center; }
-  h1, h2 { color: #003366; }
-  section { background: white; margin: 15px 0; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px #ccc; }
-  label { font-weight: bold; }
-  input, select, textarea { width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 15px; border-radius: 4px; border: 1px solid #ccc; }
-  button { background: #003366; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-size: 1em; }
-  button:hover { background: #0055aa; }
-  nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
-  nav a:hover { text-decoration: underline; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContenutiPro</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; }
+        header { background-color: #4a90e2; color: white; padding: 1rem 2rem; text-align: center; }
+        main { padding: 2rem; max-width: 800px; margin: auto; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1, h2 { color: #333; }
+        form { margin-top: 2rem; }
+        input, textarea { width: 100%; padding: 0.75rem; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { background-color: #4a90e2; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #357ab7; }
+        footer { text-align: center; padding: 1rem; font-size: 0.9rem; color: #777; }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>ContenutiPro</h1>
+        <p>Contenuti digitali professionali su richiesta</p>
+    </header>
+    <main>
+        <h2>Richiedi un contenuto</h2>
+        <p>Compila il modulo qui sotto per ricevere un contenuto personalizzato. Il nostro team ti risponderà al più presto.</p>
+        <form action="https://formspree.io/f/xgvkgwea" method="POST">
+            <label for="name">Nome:</label>
+            <input type="text" name="name" id="name" required>
 
-<header>
-  <h1>ContenutiPro</h1>
-  <nav>
-    <a href="#services">Servizi</a>
-    <a href="#freelancers">Freelancer</a>
-    <a href="#contact">Contatti</a>
-  </nav>
-</header>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
 
-<section id="intro">
-  <h2>Benvenuti su ContenutiPro</h2>
-  <p>La piattaforma automatizzata per ottenere contenuti digitali professionali, rapidi e su misura per la tua attività.</p>
-  <p>Collaboriamo con freelancer selezionati e ti aiutiamo a risparmiare tempo, gestendo noi tutta la produzione.</p>
-</section>
+            <label for="message">Descrizione del contenuto richiesto:</label>
+            <textarea name="message" id="message" rows="6" required></textarea>
 
-<section id="services">
-  <h2>Servizi Offerti</h2>
-  <ul>
-    <li>Post per social media (Facebook, Instagram, LinkedIn)</li>
-    <li>Articoli per blog</li>
-    <li>Loghi e grafiche personalizzate</li>
-    <li>Video brevi e reel</li>
-    <li>Contenuti dedicati a wedding planner</li>
-  </ul>
-</section>
-
-<section id="freelancers">
-  <h2>Freelancer Selezionati</h2>
-  <p>Abbiamo già selezionato un team di professionisti qualificati in ogni area.</p>
-  <ul>
-    <li><strong>Anna Rossi</strong> – Social media manager, 5 anni di esperienza</li>
-    <li><strong>Marco Bianchi</strong> – Copywriter specializzato in blog e SEO</li>
-    <li><strong>Giulia Verdi</strong> – Graphic designer e creativa</li>
-    <li><strong>Luca Neri</strong> – Videomaker e montatore</li>
-    <li><strong>Elisa Gallo</strong> – Specialista in contenuti per matrimoni</li>
-  </ul>
-</section>
-
-<section id="contact">
-  <h2>Richiedi un preventivo</h2>
-  <form action="https://formspree.io/f/xgvkgwea" method="POST">
-    <label for="name">Nome e Cognome:</label>
-    <input type="text" id="name" name="name" required />
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="_replyto" required />
-
-    <label for="service">Servizio richiesto:</label>
-    <select id="service" name="service" required>
-      <option value="">--Seleziona--</option>
-      <option>Post social media</option>
-      <option>Articoli per blog</option>
-      <option>Loghi e grafiche</option>
-      <option>Video brevi / Reel</option>
-      <option>Contenuti per wedding planner</option>
-    </select>
-
-    <label for="message">Dettagli aggiuntivi:</label>
-    <textarea id="message" name="message" rows="4" required></textarea>
-
-    <button type="submit">Invia richiesta</button>
-  </form>
-</section>
-
-<footer>
-  <p>© 2025 ContenutiPro - Tutti i diritti riservati</p>
-</footer>
-
+            <button type="submit">Invia richiesta</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 ContenutiPro - Tutti i diritti riservati</p>
+    </footer>
 </body>
 </html>
