@@ -1,59 +1,179 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>ContenutiPro - Contenuti Digitali per la tua Attività</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fdfdfd; color: #333; }
-        header { background: #5e17eb; color: white; padding: 2em; text-align: center; }
-        section { padding: 2em; max-width: 800px; margin: auto; }
-        .cta { background: #f0f0f0; padding: 2em; border-radius: 10px; }
-        form { display: flex; flex-direction: column; gap: 1em; }
-        input, textarea { padding: 0.8em; border: 1px solid #ccc; border-radius: 5px; }
-        button { background: #5e17eb; color: white; border: none; padding: 1em; border-radius: 5px; cursor: pointer; }
-        footer { text-align: center; font-size: 0.9em; color: #777; padding: 2em 1em; background: #fafafa; }
-        .telegram-promo { margin-top: 2em; font-size: 0.9em; }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ContenutiPro - Servizi digitali professionali</title>
+<!-- Favicon semplice -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>CP</text></svg>" />
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0; padding: 0;
+    background-color: #f9f9f9;
+    color: #222;
+    line-height: 1.6;
+  }
+  header {
+    background-color: #4a148c;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+  }
+  header .logo {
+    font-weight: bold;
+    font-size: 28px;
+    margin-right: 15px;
+    user-select: none;
+  }
+  header h1 {
+    font-size: 22px;
+    margin: 0;
+  }
+  main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  section {
+    margin-bottom: 40px;
+  }
+  section h2 {
+    border-bottom: 3px solid #4a148c;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    color: #4a148c;
+  }
+  /* Servizi lista */
+  ul.services-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  ul.services-list li {
+    background-color: #eee;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: 6px;
+  }
+  ul.services-list li strong {
+    color: #4a148c;
+  }
+  /* Form contatti */
+  form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
+  }
+  form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+  }
+  form button {
+    background-color: #4a148c;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  form button:hover {
+    background-color: #6a1b9a;
+  }
+  /* Footer evidenziato */
+  footer {
+    background-color: #d1c4e9;
+    color: #311b92;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    user-select: none;
+  }
+  footer a {
+    color: #311b92;
+    font-weight: 900;
+    text-decoration: none;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  /* Icona Telegram inline */
+  .telegram-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>ContenutiPro</h1>
-        <p>Contenuti digitali professionali per far crescere la tua attività</p>
-    </header>
 
-    <section>
-        <h2>Chi siamo</h2>
-        <p>Colleghiamo aziende e liberi professionisti con i migliori freelancer specializzati in contenuti digitali.</p>
+<header>
+  <div class="logo" title="ContenutiPro Logo">CP</div>
+  <h1>ContenutiPro - Servizi digitali professionali</h1>
+</header>
 
-        <h2>Cosa offriamo</h2>
-        <ul>
-            <li>Testi per siti web</li>
-            <li>Post per social media</li>
-            <li>Email marketing</li>
-            <li>Contenuti per wedding planner e altro</li>
-        </ul>
+<main>
 
-        <div class="telegram-promo">
-            🔔 Scopri anche il nostro canale con offerte tech giornaliere: <a href="https://t.me/offertetechdaily0" target="_blank">t.me/offertetechdaily0</a>
-        </div>
-    </section>
+<section id="chi-siamo">
+  <h2>Chi siamo</h2>
+  <p>ContenutiPro è il ponte tra attività e freelancer specializzati in contenuti digitali di qualità. Offriamo un servizio completo, semplice e affidabile per soddisfare ogni tua esigenza digitale, senza complicazioni.</p>
+</section>
 
-    <section class="cta">
-        <h2>Richiedi un contenuto</h2>
-        <p>Compila il modulo qui sotto per ricevere un contenuto personalizzato o una consulenza gratuita.</p>
-        <form action="https://formspree.io/f/xgvkgwea" method="POST">
-            <input type="text" name="name" placeholder="Il tuo nome" required>
-            <input type="email" name="_replyto" placeholder="La tua email" required>
-            <textarea name="message" rows="5" placeholder="Descrivici di cosa hai bisogno..." required></textarea>
-            <button type="submit">Invia richiesta</button>
-        </form>
-    </section>
+<section id="cosa-offriamo">
+  <h2>Cosa offriamo</h2>
+  <ul class="services-list">
+    <li><strong>Testi per siti web</strong> (pagine Chi siamo, Servizi, Blog)</li>
+    <li><strong>Post per social media</strong> (Facebook, Instagram, LinkedIn)</li>
+    <li><strong>Email marketing</strong> (newsletter, promozioni)</li>
+    <li><strong>Contenuti per wedding planner</strong> (inviti, descrizione eventi, storytelling)</li>
+    <li><strong>Script video</strong> e <strong>articoli SEO</strong></li>
+  </ul>
+</section>
 
-    <footer>
-        &copy; 2025 ContenutiPro – Tutti i diritti riservati<br>
-        Email: infocontenutipro@gmail.com
-    </footer>
+<section id="contatti">
+  <h2>Contattaci</h2>
+  <form action="https://formspree.io/f/xgvkgwea" method="POST">
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" name="nome" required />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="_replyto" required />
+
+    <label for="messaggio">Messaggio</label>
+    <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
+
+    <button type="submit">Invia richiesta</button>
+  </form>
+</section>
+
+</main>
+
+<footer>
+  Scopri anche il nostro canale con offerte tech giornaliere: 
+  <a href="https://t.me/offertetechdaily0" target="_blank" rel="noopener noreferrer">
+    t.me/offertetechdaily0
+    <svg class="telegram-icon" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" fill="#311b92">
+      <path d="M120 0C53.73 0 0 53.73 0 120s53.73 120 120 120 120-53.73 120-120S186.27 0 120 0zm56.49 77.81l-25.8 121.72c-1.96 8.34-7.09 10.43-14.37 6.48l-39.67-29.3-19.13 18.4c-2.11 2.11-3.88 3.88-7.9 3.88l2.82-40.53 73.65-66.52c3.2-2.82-.7-4.4-4.97-1.58l-91.04 57.38-39.2-12.22c-8.5-2.64-8.66-8.5 1.78-12.57l151.88-58.48c7.1-2.68 13.36 1.67 11.09 12.33z"/>
+    </svg>
+  </a>
+</footer>
+
 </body>
 </html>
