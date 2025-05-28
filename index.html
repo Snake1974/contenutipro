@@ -134,6 +134,32 @@
         background: #e6b422;
       }
 
+      .freelancer-section {
+        background: #2a2a44;
+        padding: 25px 30px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+      }
+
+      .freelancer-section button {
+        background: #ffca28;
+        color: #202020;
+        border: none;
+        padding: 15px 30px;
+        font-weight: 700;
+        font-size: 1.2rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        user-select: none;
+      }
+
+      .freelancer-section button:hover {
+        background: #e6b422;
+      }
+
       footer {
         background: #ffca28;
         color: #202020;
@@ -162,22 +188,6 @@
         vertical-align: middle;
         margin-left: 6px;
         fill: #202020;
-      }
-
-      .freelancer-link {
-        display: inline-block;
-        margin-top: 15px;
-        background-color: #ffca28;
-        color: #202020;
-        padding: 10px 20px;
-        font-weight: 700;
-        border-radius: 6px;
-        text-decoration: none;
-        transition: background 0.3s ease;
-      }
-
-      .freelancer-link:hover {
-        background-color: #e6b422;
       }
 
       @media (max-width: 600px) {
@@ -241,7 +251,12 @@
 
           <button type="submit">Invia richiesta</button>
         </form>
-        <a class="freelancer-link" href="Collabora.html">Diventa freelancer</a>
+      </section>
+
+      <section class="freelancer-section" aria-label="Diventa Freelancer">
+        <h2>Diventa Freelancer</h2>
+        <p>Se sei un professionista dei contenuti digitali e vuoi collaborare con noi, unisciti alla nostra rete di freelancer qualificati.</p>
+        <button onclick="window.location.href='collabora.html'">Candidati Ora</button>
       </section>
     </main>
 
