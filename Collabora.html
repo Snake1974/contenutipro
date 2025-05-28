@@ -1,78 +1,103 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Candidati - ContenutiPro</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #1e1e2f, #292b3e);
-      color: #e0e0e0;
-      margin: 0;
-      padding: 0;
-    }
-    header, footer {
-      background: #202040;
-      color: #ffca28;
-      text-align: center;
-      padding: 20px;
-    }
-    main {
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #2a2a44;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
-    }
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-    }
-    form label {
-      display: block;
-      margin-top: 15px;
-      font-weight: 600;
-      color: #ffd54f;
-    }
-    form input,
-    form textarea,
-    form select {
-      width: 100%;
-      padding: 10px;
-      margin-top: 6px;
-      border: none;
-      border-radius: 6px;
-      background: #1e1e30;
-      color: #f0f0f0;
-      font-family: 'Poppins', sans-serif;
-    }
-    button {
-      margin-top: 20px;
-      background: #ffca28;
-      color: #202020;
-      border: none;
-      padding: 12px 25px;
-      font-weight: 700;
-      font-size: 1rem;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    button:hover {
-      background: #e6b422;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Candidati come freelancer</h1>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Diventa Freelancer - ContenutiPro</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-  <main>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #1e1e2f, #292b3e);
+        color: #e0e0e0;
+        margin: 0;
+        padding: 20px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h1 {
+        color: #ffca28;
+        margin-bottom: 20px;
+      }
+
+      form {
+        background: #2a2a44;
+        padding: 25px 30px;
+        border-radius: 12px;
+        max-width: 480px;
+        width: 100%;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+        color: #ffd54f;
+      }
+
+      input, textarea {
+        width: 100%;
+        padding: 10px 12px;
+        margin-bottom: 16px;
+        border-radius: 6px;
+        border: none;
+        font-size: 1rem;
+        background-color: #1e1e30;
+        color: #f0f0f0;
+        resize: vertical;
+      }
+
+      input::placeholder, textarea::placeholder {
+        color: #b0b0b0;
+      }
+
+      button {
+        background: #ffca28;
+        color: #202020;
+        border: none;
+        padding: 12px 25px;
+        font-weight: 700;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        width: 100%;
+      }
+
+      button:hover {
+        background: #e6b422;
+      }
+
+      .btn-home {
+        background: transparent;
+        border: 2px solid #ffca28;
+        color: #ffca28;
+        padding: 8px 20px;
+        border-radius: 6px;
+        font-weight: 700;
+        font-size: 1rem;
+        cursor: pointer;
+        text-decoration: none;
+        margin-bottom: 20px;
+        display: inline-block;
+        transition: background 0.3s ease, color 0.3s ease;
+      }
+
+      .btn-home:hover {
+        background: #ffca28;
+        color: #202020;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html" class="btn-home" aria-label="Torna alla home">← Home</a>
+    <h1>Diventa Freelancer</h1>
+
     <form action="https://formspree.io/f/mqaqrldl" method="POST">
       <label for="nome">Nome completo</label>
       <input type="text" id="nome" name="nome" required placeholder="Il tuo nome completo" />
@@ -81,23 +106,12 @@
       <input type="email" id="email" name="email" required placeholder="La tua email" />
 
       <label for="specializzazione">Specializzazione</label>
-      <input type="text" id="specializzazione" name="specializzazione" required placeholder="Es. copywriting, grafica social, video editing..." />
+      <input type="text" id="specializzazione" name="specializzazione" required placeholder="Es. Copywriter, Grafico, Social Media Manager" />
 
-      <label for="esperienza">Esperienza</label>
-      <textarea id="esperienza" name="esperienza" rows="4" required placeholder="Breve descrizione della tua esperienza e dei tuoi lavori passati."></textarea>
-
-      <label for="portfolio">Link al tuo portfolio (opzionale)</label>
-      <input type="url" id="portfolio" name="portfolio" placeholder="Es. https://miosito.it/portfolio" />
-
-      <label for="messaggio">Messaggio aggiuntivo (opzionale)</label>
-      <textarea id="messaggio" name="messaggio" rows="3" placeholder="Scrivi qualcosa in più se lo desideri..."></textarea>
+      <label for="esperienza">Breve descrizione della tua esperienza</label>
+      <textarea id="esperienza" name="esperienza" rows="5" placeholder="Raccontaci chi sei e cosa sai fare" required></textarea>
 
       <button type="submit">Invia candidatura</button>
     </form>
-  </main>
-
-  <footer>
-    <p>ContenutiPro &copy; 2025</p>
-  </footer>
-</body>
+  </body>
 </html>
