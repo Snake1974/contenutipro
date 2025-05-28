@@ -3,88 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Diventa Freelancer - ContenutiPro</title>
+    <title>Collabora con ContenutiPro - Diventa Freelancer</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
       body {
+        margin: 0;
         font-family: 'Poppins', sans-serif;
         background: linear-gradient(135deg, #1e1e2f, #292b3e);
         color: #e0e0e0;
-        margin: 0;
-        padding: 20px;
+        line-height: 1.6;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        padding: 20px;
+      }
+
+      main {
+        background: #2a2a44;
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        max-width: 520px;
+        width: 100%;
       }
 
       h1 {
         color: #ffca28;
-        margin-bottom: 20px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-align: center;
       }
 
-      form {
-        background: #2a2a44;
-        padding: 25px 30px;
-        border-radius: 12px;
-        max-width: 480px;
-        width: 100%;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.5);
-      }
-
-      label {
+      form label {
         display: block;
         margin-bottom: 6px;
         font-weight: 600;
         color: #ffd54f;
       }
 
-      input, textarea {
+      form input,
+      form textarea {
         width: 100%;
         padding: 10px 12px;
-        margin-bottom: 16px;
+        margin-bottom: 18px;
         border-radius: 6px;
         border: none;
         font-size: 1rem;
+        font-family: 'Poppins', sans-serif;
         background-color: #1e1e30;
         color: #f0f0f0;
+        box-sizing: border-box;
         resize: vertical;
       }
 
-      input::placeholder, textarea::placeholder {
+      form input::placeholder,
+      form textarea::placeholder {
         color: #b0b0b0;
       }
 
-      button {
+      form button {
         background: #ffca28;
         color: #202020;
         border: none;
-        padding: 12px 25px;
+        padding: 14px 28px;
         font-weight: 700;
-        font-size: 1rem;
+        font-size: 1.1rem;
         border-radius: 6px;
         cursor: pointer;
         transition: background 0.3s ease;
         width: 100%;
+        user-select: none;
       }
 
-      button:hover {
+      form button:hover {
         background: #e6b422;
       }
 
       .btn-home {
-        background: transparent;
-        border: 2px solid #ffca28;
+        margin-top: 20px;
+        background: #444c66;
         color: #ffca28;
-        padding: 8px 20px;
-        border-radius: 6px;
+        border: 2px solid #ffca28;
+        padding: 12px 0;
         font-weight: 700;
         font-size: 1rem;
+        border-radius: 6px;
         cursor: pointer;
-        text-decoration: none;
-        margin-bottom: 20px;
-        display: inline-block;
+        width: 100%;
+        user-select: none;
         transition: background 0.3s ease, color 0.3s ease;
       }
 
@@ -95,23 +105,40 @@
     </style>
   </head>
   <body>
-    <a href="index.html" class="btn-home" aria-label="Torna alla home">← Home</a>
-    <h1>Diventa Freelancer</h1>
+    <main>
+      <h1>Diventa Freelancer - Candidati</h1>
+      <form action="https://formspree.io/f/xgvkgwea" method="POST">
+        <label for="nome">Nome completo *</label>
+        <input type="text" id="nome" name="nome" required placeholder="Il tuo nome completo" />
 
-    <form action="https://formspree.io/f/mqaqrldl" method="POST">
-      <label for="nome">Nome completo</label>
-      <input type="text" id="nome" name="nome" required placeholder="Il tuo nome completo" />
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required placeholder="La tua email" />
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required placeholder="La tua email" />
+        <label for="telefono">Numero di telefono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Numero di telefono (facoltativo)" />
 
-      <label for="specializzazione">Specializzazione</label>
-      <input type="text" id="specializzazione" name="specializzazione" required placeholder="Es. Copywriter, Grafico, Social Media Manager" />
+        <label for="specializzazioni">Specializzazioni principali *</label>
+        <textarea id="specializzazioni" name="specializzazioni" rows="3" required placeholder="Es. copywriting, grafica, video editing, traduzione, ecc."></textarea>
 
-      <label for="esperienza">Breve descrizione della tua esperienza</label>
-      <textarea id="esperienza" name="esperienza" rows="5" placeholder="Raccontaci chi sei e cosa sai fare" required></textarea>
+        <label for="competenze_tecniche">Competenze tecniche specifiche *</label>
+        <textarea id="competenze_tecniche" name="competenze_tecniche" rows="3" required placeholder="Elenca software, linguaggi, strumenti che conosci (es. Photoshop, SEO, WordPress)"></textarea>
 
-      <button type="submit">Invia candidatura</button>
-    </form>
+        <label for="esperienza">Esperienza professionale *</label>
+        <textarea id="esperienza" name="esperienza" rows="4" required placeholder="Breve descrizione della tua esperienza lavorativa"></textarea>
+
+        <label for="portfolio">Link al portfolio (facoltativo)</label>
+        <input type="url" id="portfolio" name="portfolio" placeholder="URL al tuo portfolio o sito personale" />
+
+        <label for="lavori">Link a esempi di lavori o creazioni (facoltativo)</label>
+        <input type="url" id="lavori" name="lavori" placeholder="URL a lavori, video, progetti, ecc." />
+
+        <label for="altre_info">Altre informazioni che vuoi condividere</label>
+        <textarea id="altre_info" name="altre_info" rows="3" placeholder="Qualsiasi dettaglio aggiuntivo"></textarea>
+
+        <button type="submit">Invia candidatura</button>
+      </form>
+
+      <button class="btn-home" onclick="window.location.href='index.html'">← Torna alla Home</button>
+    </main>
   </body>
 </html>
