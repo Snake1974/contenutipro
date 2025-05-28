@@ -31,38 +31,21 @@
         margin: 0 auto;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        justify-content: center;
         gap: 15px;
       }
 
       .logo {
         flex-shrink: 0;
-        display: flex;
-        align-items: center;
-        gap: 10px;
       }
 
       header h1 {
         margin: 0;
         font-size: 1.8rem;
         font-weight: 700;
+        text-align: center;
         color: #ffca28;
         user-select: none;
-      }
-
-      .link-freelancer {
-        background: #ffca28;
-        color: #202020;
-        padding: 10px 20px;
-        font-weight: 700;
-        border-radius: 6px;
-        text-decoration: none;
-        transition: background 0.3s ease;
-      }
-
-      .link-freelancer:hover {
-        background: #e6b422;
       }
 
       main {
@@ -181,10 +164,26 @@
         fill: #202020;
       }
 
+      .freelancer-link {
+        display: inline-block;
+        margin-top: 15px;
+        background-color: #ffca28;
+        color: #202020;
+        padding: 10px 20px;
+        font-weight: 700;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+      }
+
+      .freelancer-link:hover {
+        background-color: #e6b422;
+      }
+
       @media (max-width: 600px) {
         .header-container {
           flex-direction: column;
-          align-items: flex-start;
+          gap: 10px;
         }
         header h1 {
           font-size: 1.4rem;
@@ -202,7 +201,6 @@
           </svg>
         </div>
         <h1>ContenutiPro - Servizi digitali professionali</h1>
-        <a href="collabora.html">Diventa freelancer</a>
       </div>
     </header>
 
@@ -216,16 +214,17 @@
       <section id="cosa-offriamo">
         <h2>Cosa offriamo</h2>
         <ul>
-           <li>✅ <strong>Post Social</strong>: testi persuasivi e grafiche accattivanti per Facebook, Instagram, LinkedIn, TikTok.</li>
-           <li>✅ <strong>Email Marketing</strong>: newsletter e DEM pronte all’uso.</li>
-           <li>✅ <strong>Contenuti per siti web</strong>: testi SEO, descrizioni, landing, blog.</li>
-           <li>✅ <strong>Presentazioni professionali</strong>: slide dinamiche per eventi e conferenze.</li>
-           <li>✅ <strong>Reel e Video Script</strong>: mini-video e copioni coinvolgenti.</li>
-           <li>✅ <strong>Supporto per Wedding Planner</strong>: inviti digitali, testi emozionali, grafiche.</li>
+           <li>✅ <strong>Post Social</strong>: testi persuasivi e grafiche accattivanti per Facebook, Instagram, LinkedIn, TikTok (es. lanci promozionali, branding, offerte lampo).</li>
+           <li>✅ <strong>Email Marketing</strong>: newsletter e DEM pronte all’uso per fidelizzare clienti o lanciarne di nuovi.</li>
+           <li>✅ <strong>Contenuti per siti web</strong>: testi SEO-friendly, descrizioni prodotto, landing page, articoli per blog.</li>
+           <li>✅ <strong>Presentazioni professionali</strong>: slide dinamiche ed efficaci per conferenze, riunioni o webinar.</li>
+           <li>✅ <strong>Reel e Video Script</strong>: mini-video e copioni coinvolgenti per aumentare la tua visibilità in modo naturale.</li>
+           <li>✅ <strong>Supporto per Wedding Planner</strong>: pacchetti grafici personalizzati per matrimoni ed eventi (inviti digitali, presentazioni, testi emozionali).</li>
         </ul>
         <p>🧠 <strong>Zero stress</strong>: tu fai la richiesta, noi la inoltriamo al freelancer perfetto.<br>
-        📩 <strong>Consegna diretta</strong>: ricevi tutto via email o Google Drive.<br>
-        🔒 <strong>Soddisfazione garantita</strong>: verifichiamo ogni contenuto prima della consegna.</p>
+        📩 <strong>Consegna diretta</strong>: ricevi tutto via email o Google Drive, come preferisci.<br>
+        🔒 <strong>Soddisfazione garantita</strong>: verifichiamo la qualità prima della consegna.</p>
+        <p>🎯 <strong>Non sai da dove cominciare?</strong> Ti basta inviare una richiesta: <em>al resto pensiamo noi</em>.</p>
       </section>
 
       <section id="contatti">
@@ -242,6 +241,7 @@
 
           <button type="submit">Invia richiesta</button>
         </form>
+        <a class="freelancer-link" href="Collabora.html">Diventa freelancer</a>
       </section>
     </main>
 
