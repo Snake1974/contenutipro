@@ -1,259 +1,135 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ContenutiPro - Servizi digitali professionali</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ContenutiPro</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #292b3e);
+      color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #202040;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #ffca28;
+    }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #2a2a44;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #ffca28;
+    }
+    p, li {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .contact-form {
+      margin-top: 30px;
+    }
+    .contact-form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #ffd54f;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: none;
+      border-radius: 6px;
+      background: #1e1e30;
+      color: #f0f0f0;
+    }
+    .contact-form button {
+      margin-top: 20px;
+      background: #ffca28;
+      color: #202020;
+      border: none;
+      padding: 12px 25px;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .contact-form button:hover {
+      background: #e6b422;
+    }
+    footer {
+      background: #202040;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+    footer a {
+      color: #ffca28;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ContenutiPro</h1>
+  </header>
 
-      body {
-        margin: 0;
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(135deg, #1e1e2f, #292b3e);
-        color: #e0e0e0;
-        line-height: 1.6;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
+  <section>
+    <h2>Contenuti digitali per la tua attività</h2>
+    <p>Copywriting, grafiche social, montaggio video e molto altro. Consegna rapida e qualità garantita.</p>
+    <ul>
+      <li>Scrittura testi professionali</li>
+      <li>Contenuti per Instagram, Facebook, TikTok</li>
+      <li>Editing video, podcast e reel</li>
+      <li>Traduzioni e revisioni</li>
+    </ul>
+  </section>
 
-      header {
-        background: #202040;
-        padding: 20px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
-      }
+  <section class="contact-form">
+    <h2>Richiedi i tuoi contenuti</h2>
+    <form action="https://formspree.io/f/xxxxx" method="POST">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" required />
 
-      .header-container {
-        max-width: 960px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-      }
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
 
-      .logo {
-        flex-shrink: 0;
-      }
+      <label for="tipo">Tipo di contenuto richiesto</label>
+      <input type="text" id="tipo" name="tipo" required placeholder="Es: post Instagram, video promozionale..." />
 
-      header h1 {
-        margin: 0;
-        font-size: 1.8rem;
-        font-weight: 700;
-        text-align: center;
-        color: #ffca28;
-        user-select: none;
-      }
+      <label for="dettagli">Dettagli specifici</label>
+      <textarea id="dettagli" name="dettagli" rows="5" placeholder="Inserisci qui tutte le informazioni utili"></textarea>
 
-      main {
-        flex-grow: 1;
-        max-width: 960px;
-        margin: 30px auto;
-        padding: 0 20px;
-      }
+      <button type="submit">Invia richiesta</button>
+    </form>
+  </section>
 
-      section {
-        background: #2a2a44;
-        padding: 25px 30px;
-        border-radius: 12px;
-        margin-bottom: 30px;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
-        transition: transform 0.3s ease;
-      }
-
-      section:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 20px rgba(255, 202, 40, 0.6);
-      }
-
-      h2 {
-        color: #ffca28;
-        margin-top: 0;
-        font-weight: 700;
-        font-size: 1.6rem;
-        margin-bottom: 15px;
-      }
-
-      p {
-        font-size: 1rem;
-        margin-bottom: 12px;
-      }
-
-      ul {
-        padding-left: 20px;
-        margin-bottom: 12px;
-      }
-
-      ul li {
-        margin-bottom: 8px;
-      }
-
-      form label {
-        display: block;
-        margin-bottom: 6px;
-        font-weight: 600;
-        color: #ffd54f;
-      }
-
-      form input,
-      form textarea {
-        width: 100%;
-        padding: 10px 12px;
-        margin-bottom: 16px;
-        border-radius: 6px;
-        border: none;
-        font-size: 1rem;
-        font-family: 'Poppins', sans-serif;
-        box-sizing: border-box;
-        background-color: #1e1e30;
-        color: #f0f0f0;
-        resize: vertical;
-      }
-
-      form input::placeholder,
-      form textarea::placeholder {
-        color: #b0b0b0;
-      }
-
-      form button {
-        background: #ffca28;
-        color: #202020;
-        border: none;
-        padding: 12px 25px;
-        font-weight: 700;
-        font-size: 1rem;
-        border-radius: 6px;
-        cursor: pointer;
-        transition: background 0.3s ease;
-      }
-
-      form button:hover {
-        background: #e6b422;
-      }
-
-      footer {
-        background: #ffca28;
-        color: #202020;
-        padding: 20px;
-        text-align: center;
-        font-weight: 700;
-        font-size: 1.1rem;
-        user-select: none;
-        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15);
-      }
-
-      footer a {
-        color: #202020;
-        font-weight: 900;
-        text-decoration: none;
-        margin-left: 6px;
-      }
-
-      footer a:hover {
-        text-decoration: underline;
-      }
-
-      footer .telegram-icon {
-        width: 20px;
-        height: 20px;
-        vertical-align: middle;
-        margin-left: 6px;
-        fill: #202020;
-      }
-
-      @media (max-width: 600px) {
-        .header-container {
-          flex-direction: column;
-          gap: 10px;
-        }
-        header h1 {
-          font-size: 1.4rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="header-container">
-        <div class="logo" aria-label="Logo ContenutiPro" role="img">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-            <rect width="64" height="64" fill="transparent" />
-            <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="36" fill="#ffca28">CP</text>
-          </svg>
-        </div>
-        <h1>ContenutiPro - Servizi digitali professionali</h1>
-      </div>
-    </header>
-
-    <main>
-      <section id="chi-siamo">
-        <h2>Chi siamo</h2>
-        <p>ContenutiPro è il tuo partner digitale per la creazione di contenuti professionali e personalizzati, pensati per far crescere la tua attività online.</p>
-        <p>La nostra missione è semplificare il processo di acquisizione contenuti, mettendo in contatto aziende e freelancer esperti, per un risultato impeccabile e senza stress.</p>
-      </section>
-
-      <section id="cosa-offriamo">
-        <h2>Cosa offriamo</h2>
-        <ul>
-           <li>✅ <strong>Post Social</strong>: testi persuasivi e grafiche accattivanti per Facebook, Instagram, LinkedIn, TikTok (es. lanci promozionali, branding, offerte lampo).</li>
-           <li>✅ <strong>Email Marketing</strong>: newsletter e DEM pronte all’uso per fidelizzare clienti o lanciarne di nuovi.</li>
-           <li>✅ <strong>Contenuti per siti web</strong>: testi SEO-friendly, descrizioni prodotto, landing page, articoli per blog.</li>
-           <li>✅ <strong>Presentazioni professionali</strong>: slide dinamiche ed efficaci per conferenze, riunioni o webinar.</li>
-           <li>✅ <strong>Reel e Video Script</strong>: mini-video e copioni coinvolgenti per aumentare la tua visibilità in modo naturale.</li>
-           <li>✅ <strong>Supporto per Wedding Planner</strong>: pacchetti grafici personalizzati per matrimoni ed eventi (inviti digitali, presentazioni, testi emozionali).</li>
-        </ul>
-        <p>🧠 <strong>Zero stress</strong>: tu fai la richiesta, noi la inoltriamo al freelancer perfetto.<br>
-        📩 <strong>Consegna diretta</strong>: ricevi tutto via email o Google Drive, come preferisci.<br>
-        🔒 <strong>Soddisfazione garantita</strong>: verifichiamo la qualità prima della consegna.</p>
-        <p>🎯 <strong>Non sai da dove cominciare?</strong> Ti basta inviare una richiesta: <em>al resto pensiamo noi</em>.</p>
-      </section>
-
-      <section id="contatti">
-        <h2>Contattaci</h2>
-        <form action="https://formspree.io/f/xgvkgwea" method="POST">
-          <label for="nome">Nome completo</label>
-          <input type="text" id="nome" name="nome" required placeholder="Il tuo nome completo" />
-
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="La tua email" />
-
-          <label for="messaggio">Messaggio</label>
-          <textarea id="messaggio" name="messaggio" rows="5" required placeholder="Scrivi il tuo messaggio"></textarea>
-
-          <button type="submit">Invia richiesta</button>
-        </form>
-      </section>
-    </main>
-
-    <footer>
-      <span>Scopri anche il nostro canale con offerte tech giornaliere:</span>
-      <a href="https://t.me/offertetechdaily0" target="_blank" rel="noopener noreferrer" aria-label="Canale Telegram Offerte Tech Daily">
-        t.me/offertetechdaily0
-        <svg class="telegram-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path d="M9.04 16.93l-.39 3.72c.56 0 .8-.24 1.09-.53l2.62-2.49 5.43 4.02c1 .55 1.72.27 1.98-.94l3.59-16.94L20.39 7l-12.58 5.6z" fill="currentColor" />
-        </svg>
-      </a>
-    </footer>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const sections = document.querySelectorAll('section');
-        const observer = new IntersectionObserver(
-          entries => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-              }
-            });
-          },
-          { threshold: 0.1 }
-        );
-
-        sections.forEach(section => observer.observe(section));
-      });
-    </script>
-  </body>
+  <footer>
+    <p>ContenutiPro &copy; 2025 - <a href="https://t.me/tuotelegram">Contattaci su Telegram</a> - 
+    <a href="candidati.html">Collabora con noi</a></p>
+  </footer>
+</body>
 </html>
