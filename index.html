@@ -4,80 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ContenutiPro - Servizi digitali professionali</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #f8f9fa, #e9ecef);
-      color: #212529;
-    }
-    header {
-      background-color: #343a40;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    section {
-      padding: 2rem 1rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .block {
-      background: white;
-      margin-bottom: 2rem;
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-    h2 {
-      color: #007bff;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-    input, textarea {
-      margin-bottom: 1rem;
-      padding: 0.75rem;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-    button {
-      padding: 0.75rem;
-      border: none;
-      border-radius: 6px;
-      background-color: #007bff;
-      color: white;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-    footer {
-      background-color: #f1f3f5;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #495057;
-    }
-    .banner-telegram {
-      background-color: #ffe066;
-      padding: 1.5rem;
-      text-align: center;
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #212529;
-      border-top: 3px solid #ffd43b;
-      border-bottom: 3px solid #ffd43b;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: linear-gradient(135deg, #f2f4f8, #e0e7ff); color: #1a1a1a; padding: 20px; }
+    header { text-align: center; margin-bottom: 40px; }
+    header h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 10px; }
+    section { background: white; border-radius: 20px; padding: 30px; margin-bottom: 30px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    section:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
+    h2 { font-size: 1.8rem; font-weight: 600; margin-bottom: 15px; color: #3b3b3b; }
+    p, li { font-size: 1rem; line-height: 1.6; color: #333; }
+    ul { list-style: disc inside; }
+    form { display: flex; flex-direction: column; gap: 15px; }
+    input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 8px; }
+    button { background: #4f46e5; color: white; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; transition: background 0.3s ease; font-weight: 600; }
+    button:hover { background: #4338ca; }
+    footer { background: #1f2937; color: white; text-align: center; padding: 20px; margin-top: 40px; border-radius: 20px; }
+    footer a { color: #93c5fd; font-weight: bold; font-size: 1.2rem; text-decoration: none; }
   </style>
 </head>
 <body>
@@ -85,41 +29,36 @@
     <h1>ContenutiPro - Servizi digitali professionali</h1>
   </header>
 
-  <section class="block">
+  <section>
     <h2>Chi siamo</h2>
-    <p>Siamo un hub digitale che collega aziende e professionisti freelance per la creazione di contenuti su misura. Niente complicazioni: ci occupiamo di tutto noi, tu ci dici cosa ti serve e noi lo realizziamo.</p>
+    <p>Siamo il punto d'incontro tra attività che desiderano contenuti digitali e freelance professionisti pronti a realizzarli con qualità e puntualità.</p>
   </section>
 
-  <section class="block">
+  <section>
     <h2>Cosa offriamo</h2>
-    <p>
-      Offriamo contenuti digitali di qualità per ogni esigenza:
-      <ul>
-        <li><strong>Post per social media</strong> (Instagram, Facebook, LinkedIn) personalizzati</li>
-        <li><strong>Grafiche promozionali</strong> per eventi, offerte, lanci prodotto</li>
-        <li><strong>Copywriting professionale</strong> per blog, siti web, email marketing</li>
-        <li><strong>Contenuti per wedding planner</strong>: testi, grafiche, materiale promozionale</li>
-        <li><strong>Servizi su richiesta</strong>: basta una richiesta via modulo e ti rispondiamo subito</li>
-      </ul>
-    </p>
+    <p>Servizi digitali professionali, veloci e personalizzati, tra cui:</p>
+    <ul>
+      <li>Testi per siti web (landing page, e-commerce, blog, presentazioni)</li>
+      <li>Contenuti per social (post Instagram/Facebook, didascalie, hashtag)</li>
+      <li>Grafica e branding (loghi, copertine, grafiche promozionali)</li>
+      <li>Contenuti per Wedding Planner (inviti, descrizioni eventi, brochure)</li>
+    </ul>
+    <p>Affidati a noi: troviamo il freelance adatto e ti consegniamo il contenuto direttamente via email o Google Drive, come preferisci.</p>
   </section>
 
-  <section class="block">
-    <h2>Richiedi un contenuto</h2>
+  <section>
+    <h2>Richiesta contenuti</h2>
     <form action="https://formspree.io/f/xgvkgwea" method="POST">
       <input type="text" name="nome" placeholder="Il tuo nome" required />
       <input type="email" name="email" placeholder="La tua email" required />
-      <textarea name="messaggio" placeholder="Descrivi cosa ti serve..." rows="5" required></textarea>
+      <textarea name="richiesta" rows="5" placeholder="Descrivi cosa ti serve nel dettaglio" required></textarea>
       <button type="submit">Invia richiesta</button>
     </form>
   </section>
 
-  <div class="banner-telegram">
-    Scopri anche il nostro canale con offerte tech giornaliere: <a href="https://t.me/offertetechdaily0" target="_blank">t.me/offertetechdaily0</a>
-  </div>
-
   <footer>
-    &copy; 2025 ContenutiPro | Contattaci: infocontenutipro@gmail.com
+    <p>Scopri anche il nostro canale con offerte tech giornaliere:</p>
+    <p><a href="https://t.me/offertetechdaily0" target="_blank">t.me/offertetechdaily0</a></p>
   </footer>
 </body>
 </html>
