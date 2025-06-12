@@ -1,144 +1,81 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Collabora con ContenutiPro - Diventa Freelancer</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pannello Gestione Freelancer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #1e1e2f;
+      color: #f5f5f5;
+      padding: 20px;
+    }
 
-      body {
-        margin: 0;
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(135deg, #1e1e2f, #292b3e);
-        color: #e0e0e0;
-        line-height: 1.6;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-      }
+    h1 {
+      color: #ffca28;
+      text-align: center;
+    }
 
-      main {
-        background: #2a2a44;
-        padding: 30px 40px;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-        max-width: 520px;
-        width: 100%;
-      }
+    .filter-container {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
 
-      h1 {
-        color: #ffca28;
-        font-weight: 700;
-        margin-bottom: 25px;
-        text-align: center;
-      }
+    select, button {
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+    }
 
-      form label {
-        display: block;
-        margin-bottom: 6px;
-        font-weight: 600;
-        color: #ffd54f;
-      }
+    button {
+      background-color: #ffca28;
+      color: #1e1e2f;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-      form input,
-      form textarea {
-        width: 100%;
-        padding: 10px 12px;
-        margin-bottom: 18px;
-        border-radius: 6px;
-        border: none;
-        font-size: 1rem;
-        font-family: 'Poppins', sans-serif;
-        background-color: #1e1e30;
-        color: #f0f0f0;
-        box-sizing: border-box;
-        resize: vertical;
-      }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 2px solid #ffca28;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pannello Gestione Freelancer</h1>
 
-      form input::placeholder,
-      form textarea::placeholder {
-        color: #b0b0b0;
-      }
+  <div class="filter-container">
+    <label for="roleFilter">Ruolo:</label>
+    <select id="roleFilter">
+      <option value="">Tutti</option>
+      <option value="Copywriter">Copywriter</option>
+      <option value="Grafico">Grafico</option>
+      <option value="Video">Video Maker</option>
+    </select>
 
-      form button {
-        background: #ffca28;
-        color: #202020;
-        border: none;
-        padding: 14px 28px;
-        font-weight: 700;
-        font-size: 1.1rem;
-        border-radius: 6px;
-        cursor: pointer;
-        transition: background 0.3s ease;
-        width: 100%;
-        user-select: none;
-      }
+    <label for="portfolioFilter">Portfolio:</label>
+    <select id="portfolioFilter">
+      <option value="">Tutti</option>
+      <option value="Sì">Solo con portfolio</option>
+      <option value="No">Senza portfolio</option>
+    </select>
 
-      form button:hover {
-        background: #e6b422;
-      }
+    <button onclick="applyFilters()">Filtra</button>
+  </div>
 
-      .btn-home {
-        margin-top: 20px;
-        background: #444c66;
-        color: #ffca28;
-        border: 2px solid #ffca28;
-        padding: 12px 0;
-        font-weight: 700;
-        font-size: 1rem;
-        border-radius: 6px;
-        cursor: pointer;
-        width: 100%;
-        user-select: none;
-        transition: background 0.3s ease, color 0.3s ease;
-      }
+  <iframe id="sheetFrame" src="https://docs.google.com/spreadsheets/d/1l826xKaG_p9to-YZV5qv8HciOwc1g6bTphI-g5rI85o/edit?usp=sharing"></iframe>
 
-      .btn-home:hover {
-        background: #ffca28;
-        color: #202020;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <h1>Diventa Freelancer - Candidati</h1>
-      <form action="https://formspree.io/f/xgvkgwea" method="POST">
-        <label for="nome">Nome completo *</label>
-        <input type="text" id="nome" name="nome" required placeholder="Il tuo nome completo" />
-
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" required placeholder="La tua email" />
-
-        <label for="telefono">Numero di telefono</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="Numero di telefono (facoltativo)" />
-
-        <label for="specializzazioni">Specializzazioni principali *</label>
-        <textarea id="specializzazioni" name="specializzazioni" rows="3" required placeholder="Es. copywriting, grafica, video editing, traduzione, ecc."></textarea>
-
-        <label for="competenze_tecniche">Competenze tecniche specifiche *</label>
-        <textarea id="competenze_tecniche" name="competenze_tecniche" rows="3" required placeholder="Elenca software, linguaggi, strumenti che conosci (es. Photoshop, SEO, WordPress)"></textarea>
-
-        <label for="esperienza">Esperienza professionale *</label>
-        <textarea id="esperienza" name="esperienza" rows="4" required placeholder="Breve descrizione della tua esperienza lavorativa"></textarea>
-
-        <label for="portfolio">Link al portfolio (facoltativo)</label>
-        <input type="url" id="portfolio" name="portfolio" placeholder="URL al tuo portfolio o sito personale" />
-
-        <label for="lavori">Link a esempi di lavori o creazioni (facoltativo)</label>
-        <input type="url" id="lavori" name="lavori" placeholder="URL a lavori, video, progetti, ecc." />
-
-        <label for="altre_info">Altre informazioni che vuoi condividere</label>
-        <textarea id="altre_info" name="altre_info" rows="3" placeholder="Qualsiasi dettaglio aggiuntivo"></textarea>
-
-        <button type="submit">Invia candidatura</button>
-      </form>
-
-      <button class="btn-home" onclick="window.location.href='index.html'">← Torna alla Home</button>
-    </main>
-  </body>
+  <script>
+    function applyFilters() {
+      alert("I filtri devono essere applicati direttamente su Google Sheets con filtri preimpostati. In futuro potremo automatizzarli.");
+    }
+  </script>
+</body>
 </html>
