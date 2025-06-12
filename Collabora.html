@@ -1,81 +1,136 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pannello Gestione Freelancer</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #1e1e2f;
-      color: #f5f5f5;
-      padding: 20px;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Diventa freelancer - ContenutiPro</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-    h1 {
-      color: #ffca28;
-      text-align: center;
-    }
+      body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #1e1e2f, #292b3e);
+        color: #e0e0e0;
+        line-height: 1.6;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
 
-    .filter-container {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
+      header {
+        background: #202040;
+        padding: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+        text-align: center;
+      }
 
-    select, button {
-      padding: 10px;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      font-family: 'Poppins', sans-serif;
-    }
+      h1 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #ffca28;
+        margin: 0;
+      }
 
-    button {
-      background-color: #ffca28;
-      color: #1e1e2f;
-      font-weight: bold;
-      cursor: pointer;
-    }
+      main {
+        flex-grow: 1;
+        max-width: 720px;
+        margin: 30px auto;
+        padding: 0 20px;
+      }
 
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: 2px solid #ffca28;
-      border-radius: 12px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Pannello Gestione Freelancer</h1>
+      section {
+        background: #2a2a44;
+        padding: 25px 30px;
+        border-radius: 12px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+      }
 
-  <div class="filter-container">
-    <label for="roleFilter">Ruolo:</label>
-    <select id="roleFilter">
-      <option value="">Tutti</option>
-      <option value="Copywriter">Copywriter</option>
-      <option value="Grafico">Grafico</option>
-      <option value="Video">Video Maker</option>
-    </select>
+      h2 {
+        color: #ffca28;
+        margin-top: 0;
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+      }
 
-    <label for="portfolioFilter">Portfolio:</label>
-    <select id="portfolioFilter">
-      <option value="">Tutti</option>
-      <option value="Sì">Solo con portfolio</option>
-      <option value="No">Senza portfolio</option>
-    </select>
+      label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+        color: #ffd54f;
+      }
 
-    <button onclick="applyFilters()">Filtra</button>
-  </div>
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px 12px;
+        margin-bottom: 16px;
+        border-radius: 6px;
+        border: none;
+        font-size: 1rem;
+        font-family: 'Poppins', sans-serif;
+        background-color: #1e1e30;
+        color: #f0f0f0;
+      }
 
-  <iframe id="sheetFrame" src="https://docs.google.com/spreadsheets/d/1l826xKaG_p9to-YZV5qv8HciOwc1g6bTphI-g5rI85o/edit?usp=sharing"></iframe>
+      button {
+        background: #ffca28;
+        color: #202020;
+        border: none;
+        padding: 12px 25px;
+        font-weight: 700;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
 
-  <script>
-    function applyFilters() {
-      alert("I filtri devono essere applicati direttamente su Google Sheets con filtri preimpostati. In futuro potremo automatizzarli.");
-    }
-  </script>
-</body>
+      button:hover {
+        background: #e6b422;
+      }
+
+      footer {
+        background: #ffca28;
+        color: #202020;
+        padding: 20px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.1rem;
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Diventa Freelancer - Collabora con noi</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Candidati ora</h2>
+        <form action="https://formspree.io/f/xqkrgeyn" method="POST">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" required placeholder="Il tuo nome completo" />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="La tua email" />
+
+          <label for="competenze">Competenze principali</label>
+          <input type="text" id="competenze" name="competenze" required placeholder="Es. copywriting, design, traduzione..." />
+
+          <label for="portfolio">Link al portfolio (facoltativo)</label>
+          <input type="url" id="portfolio" name="portfolio" placeholder="https://..." />
+
+          <label for="messaggio">Presentati brevemente</label>
+          <textarea id="messaggio" name="messaggio" rows="5" required placeholder="Parlaci di te..."></textarea>
+
+          <button type="submit">Invia candidatura</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      Torna alla <a href="index.html" style="color:#202020; font-weight:bold;">home page</a>
+    </footer>
+  </body>
 </html>
